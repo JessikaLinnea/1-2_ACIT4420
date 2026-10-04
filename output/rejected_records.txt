@@ -1,0 +1,15 @@
+fitness_sessions.csv, row 26, signal_quality: must be between 0.7 and 1
+fitness_sessions.csv, row 27, signal_quality: must be between 0.7 and 1
+fitness_sessions.csv, row 28, signal_quality: must be between 0.7 and 1
+fitness_sessions.csv, row 29, signal_quality: must be between 0.7 and 1
+fitness_sessions.csv, row 30, signal_quality: must be between 0.7 and 1
+fitness_sessions_invalid.csv, row 3, heart_rate: must be a number
+fitness_sessions_invalid.csv, row 4, participant_id: participant_id has invalid format: '001'
+fitness_sessions_invalid.csv, row 5, activity_level: missing value
+fitness_sessions_invalid.csv, row 6, signal_quality: must be between 0.7 and 1
+fitness_sessions_invalid.csv, row 7, session_id: session_id has invalid format: 'FIT-26-102'
+fitness_sessions_invalid.csv, row 8, participant_id: unknown participant
+fitness_sessions_invalid.csv, row 9, timestamp: must be an integer
+fitness_sessions_invalid.csv, row 10, heart_rate: must be between 30 and 230
+fitness_sessions_invalid.csv, row 11, skin_response: must be between 0 and 20
+fitness_sessions_invalid.csv, row 12, signal_quality: missing value

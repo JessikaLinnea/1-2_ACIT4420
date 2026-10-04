@@ -1,0 +1,36 @@
+FIT-2026-001 - Amina Noor
+Classification: resting (low activity and heart rate close to baseline)
+Usable observations: 6
+Heart rate: average 68.83, min 68.0, max 70.0
+Reference difference: {'heart_rate': 0.83, 'skin_response': -0.01, 'temperature': 0.03}
+
+FIT-2026-002 - Jonas Berg
+Classification: recovering (heart rate and activity decreased at the end)
+Usable observations: 6
+Heart rate: average 102.0, min 78.0, max 118.0
+Reference difference: {'heart_rate': 28.0, 'skin_response': 0.56, 'temperature': 0.43}
+
+FIT-2026-003 - Maya Chen
+Classification: high activity (high activity or large heart-rate increase)
+Usable observations: 6
+Heart rate: average 132.5, min 72.0, max 162.0
+Reference difference: {'heart_rate': 69.5, 'skin_response': 2.14, 'temperature': 1.23}
+
+FIT-2026-004 - Amina Noor
+Classification: recovering (heart rate and activity decreased at the end)
+Usable observations: 6
+Heart rate: average 113.17, min 72.0, max 151.0
+Reference difference: {'heart_rate': 45.17, 'skin_response': 1.38, 'temperature': 0.88}
+
+FIT-2026-005 - Jonas Berg
+Classification: insufficient data (fewer than 3 usable observations)
+Usable observations: 0
+
+FIT-2026-101 - Amina Noor
+Classification: insufficient data (fewer than 3 usable observations)
+Usable observations: 1
+
+FIT-2026-102 - Jonas Berg
+Classification: insufficient data (fewer than 3 usable observations)
+Usable observations: 0
+

@@ -1,29 +1,40 @@
-# Smart Fitness Session Analyzer — Option A
+# Smart Fitness Session Analyzer
 
-This program analyzes fitness sensor data and classifies a workout session based on the readings.
+Assignment II reads fitness CSV files, validates rows, analyses sessions and
+writes reports.
 
-## Files
+The older Assignment I files are in `assignment1/`. Run them with:
 
-* `fitness_session_analyzer.py` — contains the classes and analysis logic.
-* `run_generated_scenarios.py` — runs and tests all scenarios.
-* `data_generator.py` — provided by the instructor.
+```bash
+python3 assignment1/run_generated_scenarios.py
+```
 
-## How to Run
+Run:
 
-Make sure all three files are in the same folder, then run:
+```bash
+python3 main.py
+```
 
-`python3 run_generated_scenarios.py`
+Tests:
 
-## How It Works
+```bash
+python3 -m unittest discover -s tests -v
+```
 
-The program checks sensor data such as heart rate, skin response, temperature, and activity level. Invalid readings are rejected and the reason is saved.
+Main files:
 
-Valid readings are compared with the participant's normal measurements. The program then classifies the session as:
+- `models.py` - classes and analysis
+- `csv_handler.py` - CSV reading and validation
+- `reports.py` - report files
 
-* Resting
-* Moderate activity
-* High activity
-* Recovering
-* Insufficient data
+The program reads the unchanged files in `data/` and creates:
 
-The program tests all five scenarios provided by the data generator. The poor-quality scenario gives **insufficient data** because its readings are invalid.
+```text
+output/analysis_summary.csv
+output/analysis_report.txt
+output/rejected_records.txt
+```
+
+IDs are checked with regex. Invalid rows are recorded with filename, row,
+field and reason. Sessions with fewer than three valid readings are marked
+`insufficient data`.
