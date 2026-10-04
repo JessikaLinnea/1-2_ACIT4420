@@ -36,5 +36,5 @@ output/rejected_records.txt
 ```
 
 IDs are checked with regex. Invalid rows are recorded with filename, row,
-field and reason. Sessions with fewer than three valid readings are marked
-`insufficient data`.
+field and reason. Signal quality below `0.70` is rejected. Sessions with fewer
+than three valid readings are marked `insufficient data`.
