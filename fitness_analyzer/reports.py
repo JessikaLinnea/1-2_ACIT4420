@@ -13,7 +13,13 @@ def write_reports(results: list[dict], rejected: list[dict], output_dir: Path) -
             fields = ("session_id", "participant_id", "participant_name", "usable_observations", "classification", "recovery_detected", "reason")
             writer = csv.DictWriter(file, fieldnames=fields)
             writer.writeheader()
-            writer.writerows({field: result[field] for field in fields} for result in results)
+            for result in results:
+                row = {}
+
+            for field in fields:
+                row[field] = result[field]
+
+            writer.writerow(row)
 
         report_path = output_dir / "analysis_report.txt"
         with report_path.open("w", encoding="utf-8") as file:

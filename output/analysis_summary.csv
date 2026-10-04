@@ -1,8 +1,2 @@
 session_id,participant_id,participant_name,usable_observations,classification,recovery_detected,reason
-FIT-2026-001,P001,Amina Noor,6,resting,False,low activity and heart rate close to baseline
-FIT-2026-002,P002,Jonas Berg,6,recovering,True,heart rate and activity decreased at the end
-FIT-2026-003,P003,Maya Chen,6,high activity,False,high activity or large heart-rate increase
-FIT-2026-004,P001,Amina Noor,6,recovering,True,heart rate and activity decreased at the end
-FIT-2026-005,P002,Jonas Berg,0,insufficient data,False,fewer than 3 usable observations
-FIT-2026-101,P001,Amina Noor,1,insufficient data,False,fewer than 3 usable observations
 FIT-2026-102,P002,Jonas Berg,0,insufficient data,False,fewer than 3 usable observations

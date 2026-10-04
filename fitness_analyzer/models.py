@@ -64,8 +64,11 @@ def recovery(readings):
     size = max(1, len(readings) // 3)
     before = readings[-2 * size:-size]
     end = readings[-size:]
-    heart_rate_drop = mean(reading.heart_rate for reading in before) - mean(reading.heart_rate for reading in end)
-    activity_drop = mean(reading.activity_level for reading in before) - mean(reading.activity_level for reading in end)
+    heart_rate_drop = mean(reading.heart_rate for reading in before) 
+    - mean(reading.heart_rate for reading in end)
+
+    activity_drop = mean(reading.activity_level for reading in before) 
+    - mean(reading.activity_level for reading in end)
     return heart_rate_drop >= 8 and activity_drop >= 0.15
 
 
