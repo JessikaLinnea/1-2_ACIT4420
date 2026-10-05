@@ -16,7 +16,7 @@ def arguments() -> argparse.Namespace:
 
 
 # Load data, analyse sessions and create reports.
-def main() -> int:
+def main()  -> int:
     args = arguments()
     rejected: list[dict] = []
     try:
