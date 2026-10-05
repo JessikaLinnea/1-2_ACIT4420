@@ -11,15 +11,13 @@ def write_reports(results: list[dict], rejected: list[dict], output_dir: Path) -
         summary_path = output_dir / "analysis_summary.csv"
         with summary_path.open("w", encoding="utf-8", newline="") as file:
             fields = ("session_id", "participant_id", "participant_name", "usable_observations", "classification", "recovery_detected", "reason")
-            writer = csv.DictWriter(file, fieldnames=fields)
+            writer = csv.DictWriter(file, fieldnames=fields, lineterminator="\n")
             writer.writeheader()
             for result in results:
                 row = {}
-
-            for field in fields:
-                row[field] = result[field]
-
-            writer.writerow(row)
+                for field in fields:
+                    row[field] = result[field]
+                writer.writerow(row)
 
         report_path = output_dir / "analysis_report.txt"
         with report_path.open("w", encoding="utf-8") as file:

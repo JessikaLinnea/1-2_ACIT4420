@@ -18,6 +18,7 @@ class FitnessTests(unittest.TestCase):
         self.assertEqual(len(sessions), 5)
         self.assertEqual(sum(len(session.observations) for session in sessions.values()), 24)
         self.assertEqual(len(rejected), 5)
+        self.assertEqual(sessions["FIT-2026-003"].analyse()["classification"], "high activity")
 
     def test_invalid_id(self):
         with self.assertRaises(InvalidIdentifierError):

@@ -7,7 +7,10 @@ from .models import FitnessSession, Observation, Participant, ReferenceMeasureme
 
 class InvalidIdentifierError(ValueError):
     """Raised when an identifier has an invalid format."""
-    pass
+
+    def __init__(self, field, value):
+        self.field = field
+        super().__init__(f"{field} has invalid format: {value!r}")
 
 
 # Custom error when a CSV row cannot be used.
@@ -41,7 +44,6 @@ RANGES = {"timestamp": (0, float("inf")), "heart_rate": (30, 230), "skin_respons
 def check_id(value, pattern, field):
     if not pattern.fullmatch(value or ""):
         raise InvalidIdentifierError(field, value)
-
     return value
 
 
