@@ -4,7 +4,7 @@ from pathlib import Path
 from .csv_handler import DataFileError
 
 
-# Create the three required report files.
+# Create the three required report files
 def write_reports(results: list[dict], rejected: list[dict], output_dir: Path) -> list[Path]:
     try:
         output_dir.mkdir(parents=True, exist_ok=True)

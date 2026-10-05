@@ -26,7 +26,7 @@ class ReferenceMeasurements:
         }
 
 
-# Store a participant and their reference measurements.
+# Store a participant and their reference measurements
 class Participant:
     def __init__(self, participant_id, name, reference):
         self.participant_id = participant_id
@@ -34,13 +34,13 @@ class Participant:
         self.reference = reference
 
 
-# Store one valid sensor reading.
+# Store one valid sensor reading
 class Observation:
     def __init__(self, data):
         self.__dict__.update(data)
 
 
-# Calculate average, minimum and maximum values.
+# Calculate average, minimum and maximum values
 def summary(readings):
     result = {}
     fields = ("heart_rate", "skin_response", "temperature", "activity_level", "signal_quality")
@@ -56,7 +56,7 @@ def summary(readings):
     return result
 
 
-# Check if heart rate and activity decrease at the end.
+# Check if heart rate and activity decrease at the end
 def recovery(readings):
     if len(readings) < 4:
         return False
@@ -86,7 +86,7 @@ def classify(data, difference, is_recovering):
     return "moderate activity", "activity exceeds the resting range"
 
 
-# Store one participant and all readings in one session.
+# Store one participant and all readings in one session
 class FitnessSession:
     MIN_READINGS = 3
 

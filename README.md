@@ -23,9 +23,9 @@ python3 -m unittest discover -s tests -v
 
 Main files:
 
-- `models.py` - classes and analysis
-- `csv_handler.py` - CSV reading and validation
-- `reports.py` - report files
+- `fitness_analyzer/models.py` - classes and analysis
+- `fitness_analyzer/csv_handler.py` - CSV reading and validation
+- `fitness_analyzer/reports.py` - report files
 
 The program reads the unchanged files in `data/` and creates:
 
